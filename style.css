@@ -1,149 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* Hide card <p> text by default, show on hover */
+/* Fade-in effect for card <p> text on hover */
+/* Overlay effect for card <p> text */
+.card p {
+			position: absolute;
+			left: 0;
+			right: 0;
+				top: -30px;
+				bottom: -30px;
+		background: rgba(0, 113, 197, 0.85); /* Semi-transparent blue overlay */
+		color: white;
+		border-radius: 16px;
+		opacity: 0;
+		transition: opacity 0.4s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 1em;
+		z-index: 2;
+		pointer-events: none;
+}
+.card:hover p {
+	opacity: 1;
+	pointer-events: auto;
+}
+/* Make the year numbers in h2 tags blue */
+.year-blue {
+	color: #0071c5;
+}
+.card-container{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	overflow-x: auto; /* Enable horizontal scroll */
+	max-width: 100vw;
+	margin: 20px auto; /* Center the container horizontally */
+	padding: 10px;
+	box-sizing: border-box;
+	/* Prevent wrapping so cards stay side by side */
+	flex-wrap: nowrap;
+}
 
-  <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-        <!-- Centered Intel logo -->
-        <div class="center-logo">
-          <img src="img/intel-header-logo.svg" alt="Intel Logo">
-        </div>
-      <!-- Heading and Subheading in a rectangle -->
-      <div class="heading-box">
-        <h1>
-          Sustainability Through the Ages
-        </h1>
-        <p>
-          Explore Intel's journey through time, discovering how our commitment
-          to innovation has shaped a more sustainable future for technology 
-          and our planet.
-        </p>
-      </div>
-    </div>
-  </header>
+/* Make each card appear on a white rounded rectangle */
+.card {
+	background: white; /* White background for the card */
+	border-radius: 16px; /* Rounded corners */
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow for depth */
+	padding: 16px; /* Space inside the card */
+	min-width: 250px; /* Minimum width for each card */
+	max-width: 300px; /* Maximum width for each card */
+	margin: 8px 0; /* Vertical margin between cards */
+	box-sizing: border-box; /* Include padding in width */
+		transition: box-shadow 0.2s;
+		position: relative; /* Needed for overlay positioning */
+		overflow: hidden; /* Hide overflow for overlay */
+}
 
-  <!-- Timeline Cards Section -->
-  <section>
-    <!-- Timeline Cards: Wrap all cards in a container for horizontal layout -->
-    <div class="card-container">
-      <!-- Card 1: 1968 -->
-        <div class="card">
-          <h2><span class="year-blue">1968</span></h2>
-        <img src="img/1.jpg" alt="Founders/Innovation" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>Intel Founded</h3>
-          <p>
-            Robert Noyce and Gordon Moore rename the newly formed company 
-            NM Electronics to Intel Corporation, laying the foundation for 
-            decades of technological innovation.
-          </p>
-        </div>
+/* Make the drop shadow darker when hovering over a card */
+.card:hover {
+	box-shadow: 0 6px 24px rgba(0,0,0,0.35); /* Darker and larger shadow on hover */
+}
 
-      <!-- Card 2: 1971 -->
-        <div class="card">
-          <h2><span class="year-blue">1971</span></h2>
-        <img src="img/2.jpg" alt="Microprocessor" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>First Microprocessor</h3>
-          <p>
-            Intel debuts the 4004, the world's first commercial microprocessor, 
-            igniting the microprocessor revolution and propelling the future 
-            of computing devices.
-          </p>
-        </div>
 
-      <!-- Card 3: 1978 -->
-        <div class="card">
-          <h2><span class="year-blue">1978</span></h2>
-        <img src="img/3.jpg" alt="Processor/PC" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>8086 Processor</h3>
-          <p>
-            Launch of the 8086 processor, establishing the x86 architecture 
-            that drives countless PCs and servers in the modern era.
-          </p>
-        </div>
 
-      <!-- Card 4: 1985 -->
-        <div class="card">
-          <h2><span class="year-blue">1985</span></h2>
-        <img src="img/4.jpg" alt="Multitasking/Performance" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>386 Processor</h3>
-          <p>
-            Intel introduces the 386 processor with 32-bit architecture, 
-            ushering in a new era of performance and multitasking for 
-            personal computers.
-          </p>
-        </div>
+/* Responsive: stack cards vertically on small screens */
+/* Always show cards side by side with horizontal scroll */
 
-      <!-- Card 5: 2006 -->
-        <div class="card">
-          <h2><span class="year-blue">2006</span></h2>
-        <img src="https://images.newscientist.com/wp-content/uploads/2024/10/24133338/SEI_226912852.jpg?width=1674" alt="Emissions/Environment" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>Peak GHG Emissions</h3>
-          <p>
-            This year marks Intel's highest annual greenhouse gas emissions 
-            for operations. Over subsequent years, Intel invests heavily in 
-            chemical abatement, renewable energy, and energy-efficient 
-            manufacturing to reverse this trend.
-          </p>
-        </div>
 
-      <!-- Card 6: 2020 -->
-        <div class="card">
-          <h2><span class="year-blue">2020</span></h2>
-        <img src="https://www.cleaninginstitute.org/sites/default/files/styles/featured_image/public/2019-03/shutterstock_eco-concept-recycling-symbol-on-table-600755237.jpg?itok=oaZI6Cq3" alt="Strategy/Goals" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>RISE Strategy</h3>
-          <p>
-            Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-            Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-            progress on climate action, water stewardship, and waste reduction.
-          </p>
-        </div>
+/* Make all h2 text dark blue */
+h2 {
+	color: #003366; /* Dark blue */
+	margin-top: 0;
+	font-size: 1.2em;
+}
 
-      <!-- Card 7: 2022 -->
-        <div class="card">
-          <h2><span class="year-blue">2022</span></h2>
-        <img src="https://assets.blog.siemens.com/uploads/2024/03/IMG_1307-scaled.jpeg?resize=2048%2C1170" alt="Net-Zero/Climate" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>Net-Zero By 2040</h3>
-          <p>
-            Intel announces its commitment to achieve net-zero greenhouse 
-            gas emissions (Scope 1 and 2) across its global operations 
-            by 2040, building on years of environmental initiatives.
-          </p>
-        </div>
 
-      <!-- Card 8: 2023 -->
-        <div class="card">
-          <h2><span class="year-blue">2023</span></h2>
-        <img src="https://blog.sparkfuneducation.com/hs-fs/hubfs/Idea%20-%20Basic%20Measures%20of%20Electricity.jpeg?width=902&name=Idea%20-%20Basic%20Measures%20of%20Electricity.jpeg" alt="Renewable Energy" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>Renewable Electricity</h3>
-          <p>
-            The company achieves 99% renewable electricity usage worldwide, 
-            helping to drastically lower carbon emissions and driving progress 
-            toward Intel's long-term sustainability goals.
-          </p>
-        </div>
-
-      <!-- Card 9: 2024 -->
-        <div class="card">
-          <h2><span class="year-blue">2024</span></h2>
-        <img src="https://assets.blog.siemens.com/uploads/2024/03/DSC_4147A-scaled.jpg?resize=2048%2C1069" alt="Summit/Collaboration" style="width:100%;border-radius:4px;margin-bottom:8px;">
-          <h3>Sustainability Summit</h3>
-          <p>
-            Intel hosts its first Sustainability Summit, uniting suppliers, 
-            government officials, and industry leaders to collaborate on 
-            next-generation sustainable semiconductor manufacturing.
-          </p>
-        </div>
-    </div>
-  </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
-</body>
-</html>
+/* Heading and subheading in a white rounded rectangle with shadow */
+.heading-box {
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.22); /* Strong shadow */
+	padding: 24px 32px;
+	max-width: 600px;
+	margin: 32px auto 24px auto; /* Center horizontally, space above/below */
+	text-align: center;
+}
+h1, .heading-box p {
+	color: #0071c5;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18); /* Soft shadow for text */
+}
+/* Make the Intel logo 70% smaller */
+.center-logo img {
+	width: 15%; /* 15% of the container width for a smaller logo */
+	height: auto; /* Keep the aspect ratio */
+}
+/* Set the background color for the whole page */
+body {
+	/* Gradient from slightly darker blue to #0071c5 */
+	background: linear-gradient(to bottom, #338ab8, #005a99);
+	font-family: "Intel Clear", sans-serif; /* Use Intel Clear font for all text */
+	/* Removed color: white; to undo last change */
+}
+/* Center the Intel logo using a container div */
+.center-logo {
+	text-align: center; /* This centers inline images inside the div */
+	margin-top: 20px;   /* Optional: adds some space above the logo */
+}
 /* Add your CSS here */
