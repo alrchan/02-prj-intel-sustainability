@@ -42,7 +42,7 @@
 }
 
 /* Make each card appear on a white rounded rectangle */
-.card {
+.card{
 	background: white; /* White background for the card */
 	border-radius: 16px; /* Rounded corners */
 	box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow for depth */
@@ -51,13 +51,13 @@
 	max-width: 300px; /* Maximum width for each card */
 	margin: 8px 0; /* Vertical margin between cards */
 	box-sizing: border-box; /* Include padding in width */
-		transition: box-shadow 0.2s;
-		position: relative; /* Needed for overlay positioning */
-		overflow: hidden; /* Hide overflow for overlay */
+	transition: box-shadow 0.2s;
+	position: relative; /* Needed for overlay positioning */
+	overflow: hidden; /* Hide overflow for overlay */
 }
 
 /* Make the drop shadow darker when hovering over a card */
-.card:hover {
+.card:hover{
 	box-shadow: 0 6px 24px rgba(0,0,0,0.35); /* Darker and larger shadow on hover */
 }
 
@@ -68,7 +68,7 @@
 
 
 /* Make all h2 text dark blue */
-h2 {
+h2{
 	color: #003366; /* Dark blue */
 	margin-top: 0;
 	font-size: 1.2em;
@@ -76,7 +76,7 @@ h2 {
 
 
 /* Heading and subheading in a white rounded rectangle with shadow */
-.heading-box {
+.heading-box{
 	background: white;
 	border-radius: 16px;
 	box-shadow: 0 4px 24px rgba(0,0,0,0.22); /* Strong shadow */
@@ -85,24 +85,24 @@ h2 {
 	margin: 32px auto 24px auto; /* Center horizontally, space above/below */
 	text-align: center;
 }
-h1, .heading-box p {
+h1, .heading-box p{
 	color: #0071c5;
 	text-shadow: 0 2px 8px rgba(0,0,0,0.18); /* Soft shadow for text */
 }
-/* Make the Intel logo 70% smaller */
-.center-logo img {
+
+.center-logo img{
 	width: 15%; /* 15% of the container width for a smaller logo */
 	height: auto; /* Keep the aspect ratio */
 }
 /* Set the background color for the whole page */
-body {
+body{
 	/* Gradient from slightly darker blue to #0071c5 */
 	background: linear-gradient(to bottom, #338ab8, #005a99);
 	font-family: "Intel Clear", sans-serif; /* Use Intel Clear font for all text */
 	/* Removed color: white; to undo last change */
 }
 /* Center the Intel logo using a container div */
-.center-logo {
+.center-logo{
 	text-align: center; /* This centers inline images inside the div */
 	margin-top: 20px;   /* Optional: adds some space above the logo */
 }
