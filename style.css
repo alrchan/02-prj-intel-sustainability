@@ -1,7 +1,7 @@
 /* Hide card <p> text by default, show on hover */
 /* Fade-in effect for card <p> text on hover */
 /* Overlay effect for card <p> text */
-.card p {
+.card p{
 			position: absolute;
 			left: 0;
 			right: 0;
@@ -20,12 +20,12 @@
 		z-index: 2;
 		pointer-events: none;
 }
-.card:hover p {
+.card:hover p{
 	opacity: 1;
 	pointer-events: auto;
 }
 /* Make the year numbers in h2 tags blue */
-.year-blue {
+.year-blue{
 	color: #0071c5;
 }
 .card-container{
