@@ -1,3 +1,11 @@
+/* Style for the three-column info cards */
+.info-card {
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.18); /* Strong drop shadow */
+	color: #003366;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.12); /* Subtle text shadow */
+}
 /* Hide card <p> text by default, show on hover */
 /* Fade-in effect for card <p> text on hover */
 /* Overlay effect for card <p> text */
