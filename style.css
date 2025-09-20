@@ -107,8 +107,3 @@ body{
 	margin-top: 20px;   /* Optional: adds some space above the logo */
 }
 /* Add your CSS here */
-/* Scale down the entire page content by 30% */
-.page-scale {
-	transform: scale(0.7);
-	transform-origin: top center;
-}
